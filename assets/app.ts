@@ -6,5 +6,3 @@
  */
 
 import './styles/app.scss';
-
-console.log("Bim bam boum");
