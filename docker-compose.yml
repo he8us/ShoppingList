@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+    db:
+        image: mariadb:${DATABASE_VERSION}
+        restart: always
+        ports:
+        -   ${DATABASE_PORT}:3306
+        environment:
+            MYSQL_USER: ${DATABASE_USER}
+            MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${DATABASE_NAME}
+        volumes:
+            - db_data:/var/lib/mysql
+
+volumes:
+    db_data:
