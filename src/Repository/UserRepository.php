@@ -4,7 +4,10 @@ namespace App\Repository;
 
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -15,18 +18,20 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @method User[]    findAll()
  * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
-{
-    public function __construct(ManagerRegistry $registry)
-    {
+class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface, UserLoaderInterface {
+
+    public function __construct(ManagerRegistry $registry) {
         parent::__construct($registry, User::class);
     }
 
     /**
      * Used to upgrade (rehash) the user's password automatically over time.
+     * @param UserInterface $user
+     * @param string $newEncodedPassword
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
-    public function upgradePassword(UserInterface $user, string $newEncodedPassword): void
-    {
+    public function upgradePassword(UserInterface $user, string $newEncodedPassword): void {
         if (!$user instanceof User) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', \get_class($user)));
         }
@@ -64,4 +69,14 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         ;
     }
     */
+
+    public function loadUserByUsername(string $usernameOrEmail): ?User {
+        return $this->createQueryBuilder('u')
+                    ->where("u.username = :query")
+                    ->orWhere("u.email = :query")
+                    ->setParameter('query', $usernameOrEmail)
+                    ->getQuery()
+                    ->getOneOrNullResult();
+    }
+
 }
