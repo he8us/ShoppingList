@@ -28,6 +28,7 @@
     "require-dev": {
         "hautelook/alice-bundle": "^2.8",
         "symfony/maker-bundle": "^1.22",
+        "symfony/phpunit-bridge": "^5.1",
         "symfony/web-profiler-bundle": "^5.1"
     },
     "config": {
