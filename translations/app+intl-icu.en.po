@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.4.1\n"
+
+msgid "Sign in"
+msgstr "Sign in"
+
+msgid "Username or email"
+msgstr "Username or email"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Remember me"
+msgstr "Remember me"
+
+msgid "Welcome !"
+msgstr "Welcome !"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "You are logged in as {username}, {link_open}Logout{link_close}"
+msgstr "You are logged in as {username}, {link_open}Logout{link_close}"
+
+msgid "Please Sign In"
+msgstr "Please Sign In"
