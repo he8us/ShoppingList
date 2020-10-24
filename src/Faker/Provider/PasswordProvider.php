@@ -12,8 +12,8 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
  * Class PasswordProvider
  * @package App\Faker\Provider
  */
-final class PasswordProvider extends BaseProvider
-{
+final class PasswordProvider extends BaseProvider {
+
     /**
      * @var UserPasswordEncoderInterface
      */
@@ -24,8 +24,7 @@ final class PasswordProvider extends BaseProvider
      * @param Generator $generator
      * @param UserPasswordEncoderInterface $encoder
      */
-    public function __construct(Generator $generator, UserPasswordEncoderInterface $encoder)
-    {
+    public function __construct(Generator $generator, UserPasswordEncoderInterface $encoder) {
         parent::__construct($generator);
 
         $this->encoder = $encoder;
@@ -35,9 +34,9 @@ final class PasswordProvider extends BaseProvider
      * @param string $password
      * @return string
      */
-    public function encode(string $password): string
-    {
+    public function encode(string $password): string {
         $user = new User();
         return $this->encoder->encodePassword($user, $password);
     }
+
 }
