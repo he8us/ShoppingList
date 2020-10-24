@@ -18,12 +18,12 @@
             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
 
-        <label for="inputUsername" class="sr-only">{{ "Username or email"|trans }}</label>
+        <label for="inputUsernameEmail" class="sr-only">{{ "Username or email"|trans }}</label>
         <input
                 type="text" value="{{ last_username }}"
                 placeholder="{{ "Username or email"|trans }}"
-                name="username"
-                id="inputUsername"
+                name="usernameOrEmail"
+                id="inputUsernameEmail"
                 class="form-control"
                 required
                 autofocus

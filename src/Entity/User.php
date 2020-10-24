@@ -52,7 +52,7 @@ class User implements UserInterface {
     /**
      * @ORM\Column(type="boolean")
      */
-    private $waiEnabled;
+    private $waiEnabled = false;
 
 
     public function getId(): ?int {
@@ -162,6 +162,5 @@ class User implements UserInterface {
         $this->lastname = $lastname;
         return $this;
     }
-
 
 }
