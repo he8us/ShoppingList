@@ -2,10 +2,11 @@ default:
     suites:
         default:
             contexts:
-                - App\Tests\Behat\DemoContext
+                - Behat\MinkExtension\Context\MinkContext
 
     extensions:
         Behat\MinkExtension:
+            show_cmd: 'open %s'
             base_url: "https://127.0.0.1/"
             default_session: symfony
             sessions:
