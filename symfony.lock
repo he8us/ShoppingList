@@ -1,4 +1,16 @@
 {
+    "behat/behat": {
+        "version": "v3.7.0"
+    },
+    "behat/gherkin": {
+        "version": "v4.6.2"
+    },
+    "behat/mink": {
+        "version": "v1.8.1"
+    },
+    "behat/transliterator": {
+        "version": "v1.3.0"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99"
     },
@@ -84,6 +96,30 @@
     "doctrine/sql-formatter": {
         "version": "1.1.1"
     },
+    "friends-of-behat/mink-browserkit-driver": {
+        "version": "v1.4.0"
+    },
+    "friends-of-behat/mink-extension": {
+        "version": "v2.4.0"
+    },
+    "friends-of-behat/page-object-extension": {
+        "version": "v0.3.1"
+    },
+    "friends-of-behat/symfony-extension": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "3d21344765fd3440a85bdd27d4cada186ec628bd"
+        },
+        "files": [
+            "behat.yml.dist",
+            "config/services_test.yaml",
+            "features/demo.feature",
+            "tests/Behat/DemoContext.php"
+        ]
+    },
     "fzaninotto/faker": {
         "version": "v1.9.1"
     },
@@ -165,6 +201,9 @@
     "symfony/asset": {
         "version": "v5.1.7"
     },
+    "symfony/browser-kit": {
+        "version": "v5.1.7"
+    },
     "symfony/cache": {
         "version": "v5.1.7"
     },
@@ -185,6 +224,9 @@
         "files": [
             "bin/console"
         ]
+    },
+    "symfony/css-selector": {
+        "version": "v5.1.7"
     },
     "symfony/debug-bundle": {
         "version": "4.1",
@@ -208,6 +250,9 @@
         "version": "v2.2.0"
     },
     "symfony/doctrine-bridge": {
+        "version": "v5.1.7"
+    },
+    "symfony/dom-crawler": {
         "version": "v5.1.7"
     },
     "symfony/dotenv": {
@@ -348,6 +393,9 @@
         "version": "v5.1.7"
     },
     "symfony/property-info": {
+        "version": "v5.1.7"
+    },
+    "symfony/proxy-manager-bridge": {
         "version": "v5.1.7"
     },
     "symfony/routing": {

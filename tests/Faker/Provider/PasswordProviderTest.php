@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Tests;
+namespace App\Tests\Faker\Provider;
 
 
 use App\Faker\Provider\PasswordProvider;

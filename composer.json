@@ -26,6 +26,10 @@
         "symfony/yaml": "5.1.*"
     },
     "require-dev": {
+        "friends-of-behat/mink-browserkit-driver": "^1.4",
+        "friends-of-behat/mink-extension": "^2.4",
+        "friends-of-behat/page-object-extension": "^0.3.1",
+        "friends-of-behat/symfony-extension": "^2.1",
         "hautelook/alice-bundle": "^2.8",
         "symfony/maker-bundle": "^1.22",
         "symfony/phpunit-bridge": "^5.1",
