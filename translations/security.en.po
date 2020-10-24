@@ -44,6 +44,9 @@ msgstr "No token could be found."
 msgid "Username could not be found."
 msgstr "Username could not be found."
 
+msgid "Username or email could not be found."
+msgstr "Username or email could not be found."
+
 msgid "Account has expired."
 msgstr "Account has expired."
 
