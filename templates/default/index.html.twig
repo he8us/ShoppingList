@@ -2,19 +2,8 @@
 
 {% block title %}Connection{% endblock %}
 
-{% block body_classes %}login-page text-center{% endblock %}
 {% block body %}
-    <form class="form-signin">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    </form>
+    <div class="mb-3 alert alert-success">
+        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+    </div>
 {% endblock %}

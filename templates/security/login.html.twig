@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body_classes %}login-page text-center{% endblock %}
+
+{% block body %}
+    <form class="form-login" action="{{ path('app_login') }}" method="post">
+
+
+        <h1 class="h3 mb-3 font-weight-normal">Please Log In</h1>
+
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+
+        <label for="inputUsername" class="sr-only">Username or email</label>
+        <input type="text" value="{{ last_username }}" placeholder="Username or email" name="username" id="inputUsername"
+               class="form-control" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+{% endblock %}

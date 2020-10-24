@@ -1,0 +1,43 @@
+App\Entity\User:
+    user (template):
+        firstname: <firstName()>
+        lastname: <lastName()>
+        email: <safeEmail()>
+        password: <encode('12345')>
+
+
+    superadmin (extends user):
+        username: superadmin
+        email: superadmin@example.com
+        roles:
+            - ROLE_SUPER_ADMIN
+        wai_enabled: false
+
+    admin (extends user):
+        username: admin
+        email: admin@example.com
+        roles:
+            - ROLE_ADMIN
+        wai_enabled: false
+
+
+    manager (extends user):
+        username: manager
+        email: manager@example.com
+        roles:
+            - ROLE_MANAGER
+        wai_enabled: false
+
+    user_complete (extends user):
+        username: user
+        email: user@example.com
+        roles:
+            - ROLE_USER
+        wai_enabled: false
+
+    user_wai (extends user):
+        username: user_wai
+        email: user_wai@example.com
+        roles:
+            - ROLE_USER
+        wai_enabled: true
