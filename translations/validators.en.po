@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.4.1\n"
+
+msgid "This form should not contain extra fields."
+msgstr "This form should not contain extra fields."
+
+msgid "The uploaded file was too large. Please try to upload a smaller file."
+msgstr "The uploaded file was too large. Please try to upload a smaller file."
+
+msgid "The CSRF token is invalid. Please try to resubmit the form."
+msgstr "The CSRF token is invalid. Please try to resubmit the form."
+
+msgid "This value is not a valid HTML5 color."
+msgstr "This value is not a valid HTML5 color."
+
+msgid "Please enter a valid birthdate."
+msgstr "Please enter a valid birthdate."
+
+msgid "The selected choice is invalid."
+msgstr "The selected choice is invalid."
+
+msgid "The collection is invalid."
+msgstr "The collection is invalid."
+
+msgid "Please select a valid color."
+msgstr "Please select a valid color."
+
+msgid "Please select a valid country."
+msgstr "Please select a valid country."
+
+msgid "Please select a valid currency."
+msgstr "Please select a valid currency."
+
+msgid "Please choose a valid date interval."
+msgstr "Please choose a valid date interval."
+
+msgid "Please enter a valid date and time."
+msgstr "Please enter a valid date and time."
+
+msgid "Please enter a valid date."
+msgstr "Please enter a valid date."
+
+msgid "Please select a valid file."
+msgstr "Please select a valid file."
+
+msgid "The hidden field is invalid."
+msgstr "The hidden field is invalid."
+
+msgid "Please enter an integer."
+msgstr "Please enter an integer."
+
+msgid "Please select a valid language."
+msgstr "Please select a valid language."
+
+msgid "Please select a valid locale."
+msgstr "Please select a valid locale."
+
+msgid "Please enter a valid money amount."
+msgstr "Please enter a valid money amount."
+
+msgid "Please enter a number."
+msgstr "Please enter a number."
+
+msgid "The password is invalid."
+msgstr "The password is invalid."
+
+msgid "Please enter a percentage value."
+msgstr "Please enter a percentage value."
+
+msgid "The values do not match."
+msgstr "The values do not match."
+
+msgid "Please enter a valid time."
+msgstr "Please enter a valid time."
+
+msgid "Please select a valid timezone."
+msgstr "Please select a valid timezone."
+
+msgid "Please enter a valid URL."
+msgstr "Please enter a valid URL."
+
+msgid "Please enter a valid search term."
+msgstr "Please enter a valid search term."
+
+msgid "Please provide a valid phone number."
+msgstr "Please provide a valid phone number."
+
+msgid "Error"
+msgstr "Error"

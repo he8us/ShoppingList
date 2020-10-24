@@ -1,9 +1,14 @@
+{% trans_default_domain 'app' %}
 {% extends 'base.html.twig' %}
 
-{% block title %}Connection{% endblock %}
+{% block title %}{{ "Home"|trans }}{% endblock %}
 
 {% block body %}
     <div class="mb-3 alert alert-success">
-        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        {{ "You are logged in as {username}, {link_open}Logout{link_close}"|trans({
+            "username": app.user.username,
+            "link_open": "<a href=\"#{path("app_logout")}\">",
+            "link_close": '</a>'
+        })|raw }}
     </div>
 {% endblock %}
