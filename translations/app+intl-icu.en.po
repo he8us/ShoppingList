@@ -11,9 +11,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "X-Generator: Poedit 2.4.1\n"
 
-msgid "Sign in"
-msgstr "Sign in"
-
 msgid "Username or email"
 msgstr "Username or email"
 
@@ -34,3 +31,6 @@ msgstr "You are logged in as {username}, {link_open}Logout{link_close}"
 
 msgid "Please Sign In"
 msgstr "Please Sign In"
+
+msgid "Sign in !"
+msgstr "Sign in !"
