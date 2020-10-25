@@ -6,6 +6,7 @@ namespace App\GraphQL\Resolver;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManager;
+use InvalidArgumentException;
 use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
 use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
@@ -18,7 +19,15 @@ class UserResolver implements ResolverInterface, AliasedInterface {
         $this->em = $em;
     }
 
-    public function resolve(Argument $args) {
+    /**
+     * @param Argument $args
+     * @return User|null
+     */
+    public function resolve(Argument $args): ?User {
+        if(!isset($args['id'])){
+            throw new InvalidArgumentException('id should be defined');
+        }
+
         return $this->em->getRepository(User::class)->find($args['id']);
     }
 
