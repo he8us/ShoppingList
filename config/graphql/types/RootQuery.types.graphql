@@ -1,6 +1,0 @@
-type RootQuery{
-    "Get one single user based on its ID."
-    user(id: ID!): User
-    "Recover the list of users the current user can handle."
-    users: [User]
-}

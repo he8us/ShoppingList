@@ -1,0 +1,9 @@
+OrderDirection:
+    type: enum
+    config:
+        description: "order direction"
+        values:
+            asc:
+                description: 'ascending'
+            desc:
+                description: 'descending'

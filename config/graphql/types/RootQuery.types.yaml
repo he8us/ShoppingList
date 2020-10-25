@@ -1,0 +1,17 @@
+RootQuery:
+    type: object
+    config:
+        fields:
+            user:
+                type: "User"
+                description: "Get one single user based on its ID."
+                args:
+                    id:
+                        description: "Resolves using the user id."
+                        type: "Int"
+                resolve: "@=resolver('User', [args])"
+            user_list:
+                type: "UserList"
+                argsBuilder: "Pager"
+
+                resolve: "@=resolver('UserList', [args])"
