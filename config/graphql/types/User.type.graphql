@@ -1,0 +1,14 @@
+"The different users in our application"
+type User{
+    id: ID!
+    Email: String!
+    "The display name of our user"
+    Username: String!
+    Firstname: String
+    Lastname: String
+    "The rights of the user"
+    Roles: [Roles]!
+    "Should we display a simplified interface?"
+    WaiEnabled: Boolean
+}
+
