@@ -1,33 +1,31 @@
-UserInput:
-    type: input-object
+AddUserPayload:
+    type: relay-mutation-payload
     config:
+        description: 'Payload of addUser mutation'
         fields:
+            id:
+                type: "ID!"
+                description: "The unique ID of the user"
+
             email:
-                type: "String"
+                type: "String!"
                 description: "The email address of the user"
 
             username:
-                type: "String"
+                type: "String!"
                 description: "The display name of the user"
 
             firstname:
                 type: "String"
                 description: "The first name of the user"
-
             lastname:
                 type: "String"
                 description: "The last name of the user"
 
             roles:
-                type: "[Roles]"
+                type: "[Roles]!"
                 description: "The different roles of the user"
 
             wai_enabled:
                 type: "Boolean"
                 description: "Has the user the simplified interface?"
-
-            password:
-                type: "String"
-                description: "Password of the user"
-
-

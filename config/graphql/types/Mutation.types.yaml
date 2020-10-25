@@ -1,0 +1,13 @@
+Mutation:
+    type: object
+    config:
+        name: Mutation
+        fields:
+            addUser:
+                description: 'Add a new user'
+                access: "@=hasRole('ROLE_ADMIN')"
+                builder: 'Relay::Mutation'
+                builderConfig:
+                    inputType: AddUserInput
+                    payloadType: AddUserPayload
+                    mutateAndGetPayload: '@=mutation("App\\GraphQL\\Mutation\\AddUserMutation", [value])'

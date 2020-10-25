@@ -1,4 +1,4 @@
-RootQuery:
+Query:
     type: object
     config:
         fields:
