@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 
 class UserResolverTest extends TestCase {
 
-    public function testResolve_withArgument(): void {
+    public function testResolve_withArgument_shouldReturnUser(): void {
         $user           = new User();
         $repositoryMock = $this->createMock(UserRepository::class);
 
@@ -35,7 +35,7 @@ class UserResolverTest extends TestCase {
         $this->assertEquals($user, $resolver->resolve(new Argument(['id' => 10])));
     }
 
-    public function testResolve_withoutArgument(): void {
+    public function testResolve_withoutArgument_shouldThrowException(): void {
         $entityManagerMock = $this->createMock(EntityManager::class);
         $resolver          = new UserResolver($entityManagerMock);
 
@@ -44,7 +44,7 @@ class UserResolverTest extends TestCase {
 
     }
 
-    public function testGetAliases(): void {
+    public function testGetAliases_shouldReturnAliases(): void {
         $excpected = [
             'resolve' => 'User',
         ];
