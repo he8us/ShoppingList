@@ -5,6 +5,9 @@ overblog_graphql:
         mappings:
             types:
                 -
-                    type: graphql
+                    type: yaml
                     dir: "%kernel.project_dir%/config/graphql/types"
                     suffix: null
+        builders:
+            args:
+                Pager: "App\\GraphQL\\Args\\Pager"

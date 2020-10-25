@@ -1,0 +1,9 @@
+UserList:
+    type: object
+    config:
+        description: "Recover the list of users the current user can handle."
+        fields:
+            users:
+                type: "[User]"
+                description: "User details"
+
