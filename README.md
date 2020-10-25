@@ -16,10 +16,12 @@ Tools of the trade
 * [Symfony 5](https://symfony.com/)
 * [Doctrine](https://www.doctrine-project.org/index.html)
 * [MariaDB](https://mariadb.org/)
-* [Faker](https://github.com/fzaninotto/Faker) with [hautelook/AliceBundle](https://github.com/hautelook/AliceBundle)
+* [Faker](https://github.com/fzaninotto/Faker) with [hautelook/alice-bundle](https://github.com/hautelook/AliceBundle)
 * [Behat](https://docs.behat.org/en/latest/)
 * [PHPUnit](https://phpunit.de/)
 * [Docker](https://www.docker.com/)
+* [overblog/graphql-bundle](https://github.com/overblog/GraphQLBundle)
+* [overblog/graphiql-bundle](https://github.com/overblog/GraphiQLBundle)
 
 #### Frontend
 * [Yarn](https://yarnpkg.com/)
@@ -34,3 +36,11 @@ Tools of the trade
 * Terminal: [iTerm 2](https://www.iterm2.com/)
 * Shell: [zsh](https://www.zsh.org/) with [zplug](https://github.com/zplug/zplug) (take a look at my [dotfiles ;)](https://github.com/he8us/dotfiles))
 * Translations editor: [POEdit](https://poedit.net/)
+* GraphQL Client: [Altair](https://altair.sirmuel.design/)
+
+Endpoints
+----------
+
+* Root: `/`
+* GraphQL: `/graphql/`
+* GraphiQL (GraphQL Web Client): `/graphiql`
