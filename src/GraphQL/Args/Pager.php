@@ -3,6 +3,7 @@
 
 namespace App\GraphQL\Args;
 
+use InvalidArgumentException;
 use Overblog\GraphQLBundle\Definition\Builder\MappingInterface;
 
 class Pager implements MappingInterface {
@@ -11,9 +12,10 @@ class Pager implements MappingInterface {
     protected const DESC = "desc";
 
     public function toMappingDefinition(array $config): array {
-        $defaultOrder   = isset($config['defaultOrder']) ? (int)$config['defaultOrder'] : self::ASC;
-        $defaultOrderBy = isset($config['defaultOrderBy']) ? (int)$config['defaultOrderBy'] : 'id';
+        $defaultOrder   = $this->getDefaultOrder($config);
+        $defaultOrderBy = isset($config['defaultOrderBy']) ? (string)$config['defaultOrderBy'] : 'id';
         $defaultLimit   = isset($config['defaultLimit']) ? (int)$config['defaultLimit'] : 20;
+
 
         return [
             'order'    => [
@@ -36,6 +38,21 @@ class Pager implements MappingInterface {
                 'defaultValue' => 0,
             ],
         ];
+    }
+
+    /**
+     * @param array $config
+     * @return string "asc"|"desc"
+     */
+    private function getDefaultOrder(array $config): string {
+        $defaultOrder = self::ASC;
+        if (isset($config['defaultOrder'])) {
+            if ($config['defaultOrder'] !== self::DESC && $config['defaultOrder'] !== self::ASC) {
+                throw new InvalidArgumentException('defaultOrder should be one of "asc" or "desc"');
+            }
+            $defaultOrder = $config['defaultOrder'];
+        }
+        return $defaultOrder;
     }
 
 }
