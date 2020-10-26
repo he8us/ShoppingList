@@ -55,6 +55,9 @@ class User implements UserInterface {
     private $waiEnabled = false;
 
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int {
         return $this->id;
     }
@@ -68,6 +71,10 @@ class User implements UserInterface {
         return (string)$this->username;
     }
 
+    /**
+     * @param string $username
+     * @return $this
+     */
     public function setUsername(string $username): self {
         $this->username = $username;
 
@@ -85,6 +92,10 @@ class User implements UserInterface {
         return array_unique($roles);
     }
 
+    /**
+     * @param array $roles
+     * @return $this
+     */
     public function setRoles(array $roles): self {
         $this->roles = $roles;
 
@@ -98,6 +109,10 @@ class User implements UserInterface {
         return (string)$this->password;
     }
 
+    /**
+     * @param string $password
+     * @return $this
+     */
     public function setPassword(string $password): self {
         $this->password = $password;
 
@@ -120,10 +135,17 @@ class User implements UserInterface {
     }
 
 
+    /**
+     * @return string
+     */
     public function getEmail(): string {
         return (string)$this->email;
     }
 
+    /**
+     * @param string $email
+     * @return $this
+     */
     public function setEmail(string $email): self {
         $this->email = $email;
 
@@ -131,10 +153,17 @@ class User implements UserInterface {
     }
 
 
+    /**
+     * @return bool
+     */
     public function getWaiEnabled(): bool {
         return (boolean)$this->waiEnabled;
     }
 
+    /**
+     * @param bool $waiEnabled
+     * @return $this
+     */
     public function setWaiEnabled(bool $waiEnabled): self {
         $this->waiEnabled = $waiEnabled;
 
@@ -142,22 +171,36 @@ class User implements UserInterface {
     }
 
 
+    /**
+     * @return string
+     */
     public function getFirstname(): string {
         return $this->firstname;
     }
 
 
+    /**
+     * @param string $firstname
+     * @return $this
+     */
     public function setFirstname(string $firstname): self {
         $this->firstname = $firstname;
         return $this;
     }
 
 
+    /**
+     * @return string
+     */
     public function getLastname(): string {
         return $this->lastname;
     }
 
 
+    /**
+     * @param string $lastname
+     * @return $this
+     */
     public function setLastname(string $lastname): self {
         $this->lastname = $lastname;
         return $this;

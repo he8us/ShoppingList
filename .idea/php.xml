@@ -106,6 +106,7 @@
       <path value="$PROJECT_DIR$/vendor/friends-of-behat/mink-browserkit-driver" />
       <path value="$PROJECT_DIR$/vendor/friends-of-behat/mink-extension" />
       <path value="$PROJECT_DIR$/vendor/friends-of-behat/page-object-extension" />
+      <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
