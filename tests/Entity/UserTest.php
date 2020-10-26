@@ -9,86 +9,89 @@ use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase {
 
-    private $object;
+    /**
+     * @var User
+     */
+    private $user;
 
     protected function setUp(): void {
-        $this->object = new User();
+        $this->user = new User();
     }
 
     public function testIdGetter_shouldReturnNull(): void {
-        $this->assertNull($this->object->getId());
+        $this->assertNull($this->user->getId());
     }
 
     public function testUsernameFluentSetterGetter_shouldReturnSameValue(): void {
-        $ref = $this->object->setUsername("superman");
+        $ref = $this->user->setUsername("superman");
 
-        $this->assertEquals($ref, $this->object);
-        $this->assertEquals("superman", $this->object->getUsername());
+        $this->assertEquals($ref, $this->user);
+        $this->assertEquals("superman", $this->user->getUsername());
     }
 
     public function testFirstnameFluentSetterGetter_shouldReturnSameValue(): void {
-        $ref = $this->object->setFirstname("Clark");
+        $ref = $this->user->setFirstname("Clark");
 
-        $this->assertEquals($ref, $this->object);
-        $this->assertEquals("Clark", $this->object->getFirstname());
+        $this->assertEquals($ref, $this->user);
+        $this->assertEquals("Clark", $this->user->getFirstname());
     }
 
     public function testLastnameFluentSetterGetter_shouldReturnSameValue(): void {
-        $ref = $this->object->setLastname("Kent");
+        $ref = $this->user->setLastname("Kent");
 
-        $this->assertEquals($ref, $this->object);
-        $this->assertEquals("Kent", $this->object->getLastname());
+        $this->assertEquals($ref, $this->user);
+        $this->assertEquals("Kent", $this->user->getLastname());
     }
 
     public function testRolesGetter_withoutAnyRole_shouldReturnUserRole(): void {
         $this->assertEquals([
             'ROLE_USER',
-        ], $this->object->getRoles());
+        ], $this->user->getRoles());
     }
 
     public function testRolesFluentSetterGetter_shouldReturnCorrectRoles(): void {
-        $ref = $this->object->setRoles([
+        $ref = $this->user->setRoles([
             'ROLE_SUPERHERO',
         ]);
 
-        $this->assertEquals($ref, $this->object);
+        $this->assertEquals($ref, $this->user);
         $this->assertEquals([
             'ROLE_SUPERHERO',
             'ROLE_USER',
-        ], $this->object->getRoles());
+        ], $this->user->getRoles());
     }
 
     public function testPasswordFluentSetterGetter_shouldReturnSameValue(): void {
-        $ref = $this->object->setPassword('12345');
+        $ref = $this->user->setPassword('12345');
 
-        $this->assertEquals($ref, $this->object);
-        $this->assertEquals('12345', $this->object->getPassword());
+        $this->assertEquals($ref, $this->user);
+        $this->assertEquals('12345', $this->user->getPassword());
     }
 
     public function testEmailFluentSetterGetter_shouldReturnSameValue(): void {
-        $ref = $this->object->setEmail('clark@dailyplanet.com');
+        $ref = $this->user->setEmail('clark@dailyplanet.com');
 
-        $this->assertEquals($ref, $this->object);
-        $this->assertEquals('clark@dailyplanet.com', $this->object->getEmail());
+        $this->assertEquals($ref, $this->user);
+        $this->assertEquals('clark@dailyplanet.com', $this->user->getEmail());
     }
 
     public function testSaltGetter_shouldReturnNull(): void {
-        $this->assertNull($this->object->getSalt());
+        $this->assertNull($this->user->getSalt());
     }
 
     public function testEraseCredentials_shouldReturnNull(): void {
-        $this->assertNull($this->object->eraseCredentials());
+        $this->assertNull($this->user->eraseCredentials());
     }
 
     public function testWaiEnabled_shouldDefaultedFalse(): void {
-        $this->assertEquals(false, $this->object->getWaiEnabled());
+        $this->assertEquals(false, $this->user->getWaiEnabled());
     }
 
     public function testWaiEnabledFluentSetterGetter_shouldReturnSameValue(): void {
-        $ref = $this->object->setWaiEnabled(true);
+        $ref = $this->user->setWaiEnabled(true);
 
-        $this->assertEquals($ref, $this->object);
-        $this->assertEquals(true, $this->object->getWaiEnabled());
+        $this->assertEquals($ref, $this->user);
+        $this->assertEquals(true, $this->user->getWaiEnabled());
     }
 
 }

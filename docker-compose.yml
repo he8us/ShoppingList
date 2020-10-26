@@ -4,7 +4,7 @@ services:
         image: mariadb:${DATABASE_VERSION}
         restart: always
         ports:
-        -   ${DATABASE_PORT}:3306
+            - ${DATABASE_PORT}:3306
         environment:
             MYSQL_USER: ${DATABASE_USER}
             MYSQL_PASSWORD: ${DATABASE_PASSWORD}
@@ -13,5 +13,25 @@ services:
         volumes:
             - db_data:/var/lib/mysql
 
+    db_test:
+        image: mariadb:${DATABASE_VERSION}
+        restart: always
+        ports:
+            - ${DATABASE_TEST_PORT}:3306
+        environment:
+            MYSQL_USER: ${DATABASE_USER}
+            MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${DATABASE_NAME}
+        volumes:
+            - db_data_test:/var/lib/mysql
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
+
 volumes:
     db_data:
+    db_data_test:
