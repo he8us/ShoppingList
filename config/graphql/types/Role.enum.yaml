@@ -1,0 +1,17 @@
+Role:
+    type: enum
+    config:
+        name: Role
+        description: "The rights of the user in the app"
+        values:
+            ROLE_USER:
+                description: "Can create and manage multiple lists, can add products into the DB"
+
+            ROLE_MANAGER:
+                description: "Can create and manage multiple user lists, can add products into the DB"
+
+            ROLE_ADMIN:
+                description: "Can decide which manager handles which user"
+
+            ROLE_SUPER_ADMIN:
+                description: "Can impersonate everyone (used for application debugging)"

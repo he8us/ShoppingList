@@ -1,0 +1,19 @@
+Query:
+    type: object
+    config:
+        name: Query
+        fields:
+            allUsers:
+                description: 'Get a list of all users'
+                type: '[User]!'
+                argsBuilder: Relay::Connection
+                resolve: '@=resolver("App\\GraphQL\\Resolver\\Query\\AllUsersResolver", [args])'
+
+            singleUser:
+                description: "Get one single user based on its ID."
+                type: 'User'
+                resolve: '@=resolver("App\\GraphQL\\Resolver\\Query\\SingleUserResolver", [args])'
+                args:
+                    id:
+                        description: "Resolves using the user id."
+                        type: "Int"
