@@ -31,3 +31,4 @@ services:
     # please note that last definitions always *replace* previous ones
 
     Symfony\Bridge\Doctrine\Security\RememberMe\DoctrineTokenProvider: ~
+    Doctrine\ORM\EntityManager: "@doctrine.orm.default_entity_manager"
