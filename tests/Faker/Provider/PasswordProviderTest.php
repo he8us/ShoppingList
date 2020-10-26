@@ -11,9 +11,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class PasswordProviderTest extends TestCase {
 
-    private $provider;
-
-    protected function setUp(){
+    public function testEncodeFakerMethod_shouldCallUserPasswordEncoder(): void {
         $generator = $this->createMock(Generator::class);
 
         $encoder = $this->createMock(UserPasswordEncoderInterface::class);
@@ -23,12 +21,9 @@ class PasswordProviderTest extends TestCase {
             ->method("encodePassword")
             ->will($this->returnArgument(1));
 
-        $this->provider = new PasswordProvider($generator, $encoder);
+        $provider = new PasswordProvider($generator, $encoder);
+
+        $this->assertEquals(12345, $provider->encode(12345));
     }
 
-    public function testEncodeFakerMethod() {
-
-
-        $this->assertEquals(12345, $this->provider->encode(12345));
-    }
 }
